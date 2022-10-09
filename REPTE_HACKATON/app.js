@@ -17,8 +17,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 
-//? berta y gerard
-
 
 // Definim les expresions RegExp per fer coincidir text amb un patró.
 //  RegExp ens permet eliminar les cometes entre cualsevol tipus de número
@@ -78,48 +76,6 @@ app.get("/multicoma", async (_req, res) => {
         res.status(400);
     }
 });
-
-
-
-
-
-// const upload = multer({
-//     storage: storage,
-//     fileFilter: (req, file, cb) => {
-
-//         let extensioArxiu = path.extname(file.originalname);
-
-//         if (extensioArxiu == '.csv') {
-//             return cb(null, true);
-
-//         } else {
-//             console.log("Extensió no permesa");
-//             req.fileValidationError = "Extensió no permesa";
-//             return cb(null, false, req.fileValidationError);
-//         };
-//     }
-// });
-
-
-// app.post('/upload', upload.single('imatge'), (req, res, next) => {
-//     console.log(req.file)
-
-//     if (req.fileValidationError) {
-//         console.log("Error: " + req.fileValidationError);
-//         // console.log("No s'ha pujat cap arxiu!");
-//         return res.status(400).json({ error: req.fileValidationError });
-
-//     } else if (!req.file) {
-//         console.log("No s'ha pujat cap arxiu!");
-//         return res.status(400).json({ error: "No s'ha pujat cap arxiu!" });
-
-//     } else {
-//         // console.log(req.file);
-//         // console.log(path.extname(req.file.originalname));
-//         return res.status(200).send({ success: `L'arxiu s'ha carregat correctament: ${req.file.originalname}` });
-//     };
-
-// });
 
 
 
