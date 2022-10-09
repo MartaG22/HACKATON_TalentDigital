@@ -45,15 +45,6 @@ app.get("/oneColumn", async (_req, res) => {
 
 
 
-
-
-
-
-
-
-
-
-
 //! Tarea 2
 // Tengo un endpoint que puede (o el mismo anterior) que puede convertir archivos multicolumna.
 
